@@ -3,8 +3,6 @@ opened_file = open("praise_song_for_the_day.txt", "r")
 read_file = opened_file.read().lower()
 # print(read_file)
 
-#variable.count() for counting words
-
 STOP_WORDS = [
     ' a ', ' an ', ' and ', ' are ', ' as ', ' at ', ' be ', ' by ', ' for ', ' from ', ' has ', ' he ',
     ' i ', ' in ', ' is ', ' it ', ' its ', ' of ', ' on ', ' that ', ' the ', ' to ', ' were ',
@@ -25,19 +23,30 @@ def remove_punctuation(punctuation, file):
             file = file.replace(item, " ")
     return file
 
-
-data_text = remove_stop_words(STOP_WORDS, read_file)
-print(data_text)
-final_text = remove_punctuation(punctuation, data_text)
-print(final_text)
-
-
-
+word_text = remove_stop_words(STOP_WORDS, read_file)
+# print(word_text)
+ready_text = remove_punctuation(punctuation, word_text)
+# print(ready_text)
 
 
 def print_word_freq(file):
-    # """Read in `file` and print out the frequency of words in that file."""
-    pass
+    word_list = ready_text.split()
+    print(word_list)
+    word_counter = {
+
+}
+
+
+print_word_freq(ready_text)
+
+
+# .count method counts whatever argument you pass through () so pass each key in dict 
+# take list of words, take a word, ask if its a key in dict. 
+# if yes add one += 1
+# if no create key in dict and set value to 1
+
+
+
 
 # if __name__ == "__main__":
 #     import argparse
