@@ -53,25 +53,20 @@ def stringify(list):
     for item in list:
         print(item[0], item[1], '|', '*'*(item[1]))
 
-def align_items():
-    #function inside of function to count length of longest word
-    #then set placement of '|' to that length plus one
+def align_items(items):
+    for item in items:
+        print(len(item[0]))
+    #above function prints length of string as int
+    #now find the longest string 
+    #then add that white space to beggining of each string...
+    #...of letters until you reach a max length (set by longest string)
     pass
-
 
 sorted_dictionary = create_sorted_dictionary(ready_text)
 stringify(sorted_dictionary)
+# align_items(sorted_dictionary)
 
     
-
-
-
-# .count method counts whatever argument you pass through () so pass each key in dict 
-# take list of words, take a word, ask if its a key in dict. 
-# if yes add one += 1
-# if no create key in dict and set value to 1
-
-
 
 
 # if __name__ == "__main__":
