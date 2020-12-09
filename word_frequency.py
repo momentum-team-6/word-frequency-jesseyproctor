@@ -31,10 +31,19 @@ ready_text = remove_punctuation(punctuation, word_text)
 
 def print_word_freq(file):
     word_list = ready_text.split()
-    print(word_list)
+    # print(word_list)
     word_counter = {
 
 }
+    for item in word_list:
+        if item in word_counter:
+            word_counter[item] +=1
+        else:
+            word_counter[item] = 1
+        #if I wanted to use .get method it would look like:
+        #for item in word_list:
+        #   word_counter[item] = word_counter.get(item, 0) + 1
+    print(word_counter)
 
 
 print_word_freq(ready_text)
