@@ -53,6 +53,11 @@ def stringify(list):
     for item in list:
         print(item[0], item[1], '|', '*'*(item[1]))
 
+def align_items():
+    #function inside of function to count length of longest word
+    #then set placement of '|' to that length plus one
+    pass
+
 
 sorted_dictionary = create_sorted_dictionary(ready_text)
 stringify(sorted_dictionary)
