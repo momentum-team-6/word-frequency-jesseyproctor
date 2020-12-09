@@ -43,10 +43,13 @@ def print_word_freq(file):
         #if I wanted to use .get method it would look like:
         #for item in word_list:
         #   word_counter[item] = word_counter.get(item, 0) + 1
-    print(word_counter)
+    # print(word_counter)
+    sorted_dict = sorted(word_counter.items(), key = lambda x:x[1])
+    print(sorted_dict)
 
 
 print_word_freq(ready_text)
+
 
 
 # .count method counts whatever argument you pass through () so pass each key in dict 
