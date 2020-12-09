@@ -44,7 +44,7 @@ def print_word_freq(file):
         #for item in word_list:
         #   word_counter[item] = word_counter.get(item, 0) + 1
     # print(word_counter)
-    sorted_dict = sorted(word_counter.items(), key = lambda x:x[1])
+    sorted_dict = sorted(word_counter.items(), key = lambda x:x[1], reverse=True)
     print(sorted_dict)
 
 
