@@ -29,12 +29,10 @@ ready_text = remove_punctuation(punctuation, word_text)
 # print(ready_text)
 
 
-def print_word_freq(file):
+def create_sorted_dictionary(file):
     word_list = ready_text.split()
     # print(word_list)
-    word_counter = {
-
-}
+    word_counter = {}
     for item in word_list:
         if item in word_counter:
             word_counter[item] +=1
@@ -44,11 +42,22 @@ def print_word_freq(file):
         #for item in word_list:
         #   word_counter[item] = word_counter.get(item, 0) + 1
     # print(word_counter)
-    sorted_dict = sorted(word_counter.items(), key = lambda x:x[1], reverse=True)
-    print(sorted_dict)
+    return sorted(word_counter.items(), key = lambda x:x[1], reverse=True)
+    
+    # print(sorted_dict)
+    # print(sorted_dict )
+    # print(sorted_dict.keys, sorted_dict.values)
+
+def stringify(list):
+    # print(list)
+    for item in list:
+        print(item[0], item[1], '|', '*'*(item[1]))
 
 
-print_word_freq(ready_text)
+sorted_dictionary = create_sorted_dictionary(ready_text)
+stringify(sorted_dictionary)
+
+    
 
 
 
